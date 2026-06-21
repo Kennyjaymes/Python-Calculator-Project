@@ -42,17 +42,27 @@ print(calculator.divide(10, 2))    # Output: 5.0
 
 ### Running Tests Locally
 
-You can run the test suite locally using Python's built-in `unittest` module:
+You can run the test suite locally using `pytest`. First, install `pytest`:
+
+```bash
+pip install pytest
+```
+
+Then run the tests:
+
+```bash
+pytest
+```
+
+Alternatively, you can run the test suite using Python's built-in `unittest` module:
 
 ```bash
 python -m unittest discover -s . -p "test_*.py"
 ```
 
-*Note: Depending on your system configuration, you might need to use `python3` or a specific version executable like `python3.14`.*
-
 ## Continuous Integration (CI)
 
-This project is configured with a GitHub Actions workflow that automatically runs all unit tests on:
+This project is configured with a GitHub Actions workflow that automatically runs all unit tests using `pytest` on:
 - Every push to any branch.
 - Every pull request.
 
